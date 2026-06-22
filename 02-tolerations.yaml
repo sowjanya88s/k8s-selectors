@@ -3,10 +3,14 @@ kind: Pod
 metadata:
   name: nginx
   #namespace: roboshop
+  labels:
+   env: dev
 spec:
   containers:
   - name: nginx
     image: nginx
+  nodeSelector:
+    project: roboshop
   tolerations:
   - key: "project"
     operator: "Equal"
