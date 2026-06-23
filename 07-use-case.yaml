@@ -20,7 +20,7 @@ spec:
               - key: app
                 operator: In
                 values:
-                - web-store
+                - store
             topologyKey: "kubernetes.io/hostname"
       containers:
       - name: redis-server
